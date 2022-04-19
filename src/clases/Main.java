@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author acer_usuario
+ * @author Ivan Castro Garcia 2407
  */
 public class Main {
 
@@ -478,7 +478,8 @@ public class Main {
         }
         
         for(int i = 1; i < formatedISBN.length; i++){
-            Pattern pattern = Pattern.compile("[a-zA-Z\s]");
+            Pattern pattern = Pattern.compile("[a-zA-Z\s]");//Ignorar este error, ya que el programa sigue funcionando
+            //El problema es que NethBeans detecta un error de sintaxis en el simbolo de escape "\"
             Matcher match = pattern.matcher(formatedISBN[i]);
             
             if(match.find()){
